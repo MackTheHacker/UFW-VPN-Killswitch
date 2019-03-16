@@ -6,7 +6,7 @@ A). This script will only work if run as root. It will fail otherwise. Inspect t
 
 B). To setup the firewall rules initially, you MUST provide up to FOUR VPN IP addresses to connect to in the command line
 
-C). You must import your VPN connection beforehand and configure it before you run this script.
+C). You must import your VPN connection beforehand and configure it before you run this script. (This is designed for OpenVPN)
 
 C2). Once you have configured your VPN connection, edit line 44 with the name of your VPN's connection (check with: nmcli con) 
 
