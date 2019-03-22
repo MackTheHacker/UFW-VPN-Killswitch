@@ -5,10 +5,16 @@ read userInit
 
 if [ $userInit = "y" ]; then
 	echo "Setting up firewall rules..." 
-	ufw default deny outgoing
-	ufw default deny incoming
-	ufw allow out on tun0 from any to any 
-	
+	echo "Set default firewall rules (select yes for first time setup)? [y/N]"
+	read defaultRules
+	if [ $defaultRules = "y" ]; then 
+		ufw default deny outgoing
+		ufw default deny incoming
+		ufw allow out on tun0 from any to any 
+	else
+		echo "firewall initialization has been skipped. If you already set it up, ignore this message."
+	fi
+
 	if [ -z "$1" ]; then
 		(>&2 echo "No IP address provided in commandline, skipping first entry")
 	else
