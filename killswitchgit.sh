@@ -47,7 +47,7 @@ read userChoiceConnect
 
 if [ $userChoiceConnect = "y" ]; then
 	echo "connecting to VPN..."
-	nmcli --ask con up id YOUROVPNCONFIGFILEHERE
+	nmcli --ask con up id YOUROVPNCONFIGFILENAME
 fi
 
 echo "[y/N] to ENABLE ufw killswitch?" 

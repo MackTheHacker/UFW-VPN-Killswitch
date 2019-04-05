@@ -8,7 +8,7 @@ B). To setup the firewall rules initially, you MUST provide up to FOUR VPN IP ad
 
 C). You must import your VPN connection beforehand and configure it before you run this script. (This is designed for OpenVPN)
 
-C2). Once you have configured your VPN connection, edit line 44 with the name of your VPN's connection (check with: nmcli con) 
+C2). Once you have configured your VPN connection, edit line 50 with the name of your VPN's connection (check with: nmcli con) 
 
 D). This script utilizes UFW. If you do not have it installed, it will not work. 
 
